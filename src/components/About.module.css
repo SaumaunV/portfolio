@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.about, .skills{
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+    align-items: center;
+    margin: 0 6rem
+}
+
+.skillGrid {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.heading {
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: x-large;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.img {
+    height: 96px;
+    margin-bottom: -0.25rem;
+}
+
+i {
+    font-size: 96px;
+}
+
+
+figcaption {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: large;
+}
