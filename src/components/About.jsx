@@ -6,20 +6,22 @@ function About() {
       <div className={styles.about}>
         <h1 className={styles.heading}>About</h1>
         <p>
-          I am a software developer and computer science graduate from the University of Illinois at Chicago.
+          I am a web developer and computer science graduate interested in
+          creating visually pleasing and intuitive web experiences that leave a
+          lasting impression.
         </p>
         <p>
-          I have honed my skills in HTML, CSS, JavaScript, and frontend frameworks 
-          such as React and Next.js. On the backend, I have experience with server-side 
-          languages like Node.js and C#, along with database management systems like MySQL
-          and PostgreSQL.
+          I have honed my skills in frontend frameworks such as React and
+          Next.js. On the backend, I have experience with server-side languages
+          like Node.js and C#, along with database management systems like
+          MySQLand PostgreSQL.
         </p>
         <p>
           I am eager to contribute my skills and learn from experienced
           professionals, and I am excited about the opportunity to make a
-          meaningful impact as part of a talented team. I am committed to 
-          continuous improvement, open to challenges, and ready to take on 
-          new and exciting projects.
+          meaningful impact as part of a talented team. I am committed to
+          continuous improvement, open to challenges, and ready to take on new
+          and exciting projects.
         </p>
       </div>
       <div className={styles.skills}>
