@@ -1,0 +1,59 @@
+.container {
+    max-width: 500px;
+    padding: 3rem;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+.heading {
+    margin-bottom: 1rem;
+}
+
+.stack {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.stackItem {
+    /* border: 1px solid #5b21b6; */
+    background-color: #ddd6fe;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    color: #5b21b6;
+    font-weight: bold; 
+}
+
+.liveButton, .codeButton {
+    width: 150px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    background-color: white;
+    border: 2px solid #21A6F0;
+    border-radius: 4px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #0877b3;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.liveButton {
+    margin-right: 1rem;
+}
+
+.codeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.githubIcon {
+    font-size: 2rem;
+}
