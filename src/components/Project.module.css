@@ -1,12 +1,23 @@
 .container {
-    max-width: 500px;
-    padding: 3rem;
+    max-width: 400px;
+    padding: 1rem;
     border: 1px solid lightgray;
     border-radius: 4px;
 }
 
+.img {
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
+}
+
 .heading {
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.description {
+    font-size: large;
 }
 
 .stack {
@@ -14,20 +25,25 @@
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
+    height: 4rem;
 }
 
 .stackItem {
-    /* border: 1px solid #5b21b6; */
-    background-color: #ddd6fe;
+    background-color: #bfdbfe;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
-    color: #5b21b6;
+    color: #1e3a8a;
     font-weight: bold; 
+    height: max-content;
 }
 
 .liveButton, .codeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px;
+    height: 50px;
     font-weight: 700;
     font-size: 1.25rem;
     background-color: white;
@@ -41,19 +57,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
-.liveButton {
-    margin-right: 1rem;
+.liveButton, .codeButton {
+    gap: 0.25rem;
 }
 
 .codeButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 0.4rem;
 }
 
 .githubIcon {
     font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
 }
