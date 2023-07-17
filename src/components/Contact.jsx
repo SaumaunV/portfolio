@@ -1,19 +1,18 @@
-import React, { useRef } from "react";
+import React, { forwardRef, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./Contact.module.css";
 
-function Contact() {
+function Contact(_, ref) {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        "service_msrwxu5",
+        "template_4f60f1h",
         form.current,
-        process.env.REACT_APP_PUBLIC_KEY
+        "AKG0LKTPY5f4CwmHH"
       )
       .then(
         (result) => {
@@ -23,24 +22,25 @@ function Contact() {
           console.log(error.text);
         }
       );
+    form.current.reset();
   };
 
   return (
-    <div className={styles.container}>
+    <div ref={ref} className={styles.container}>
       <div className={styles.formContainer}>
         <h1 className={styles.heading}>Contact Me</h1>
         <form ref={form} onSubmit={sendEmail} className={styles.form}>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="user_name" />
+          <input type="text" id="name" name="user_name" required/>
           <label htmlFor="email">Email</label>
-          <input type="text" id="email" name="user_email" />
+          <input type="email" id="email" name="user_email" required />
           <label htmlFor="message">Message</label>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          <button type="submit">Submit</button>
+          <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+          <button className={styles.submit} type="submit">Submit</button>
         </form>
       </div>
     </div>
   );
 }
 
-export default Contact;
+export default forwardRef(Contact)
