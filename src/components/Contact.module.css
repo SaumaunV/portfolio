@@ -7,18 +7,15 @@
     justify-content: center;
 }
 
-.info {
-    flex: 0.4;
-}
+
 
 .formContainer {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     width: 50vw;
-    /* flex: 0.6; */
+    max-width: 50vw;
 }
 
 .formContainer::before {  
@@ -59,6 +56,7 @@ input, textarea {
 
 input {
     height: 2.5rem;
+    padding: 0 0.5rem;
 }
 
 textarea {
@@ -76,6 +74,51 @@ textarea {
 
 button {
     cursor: pointer;
-    width: 200px;
+    width: 100%;
     height: 50px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: white;
+    border: none;
+}
+
+@media (max-width: 1500px) {
+  .container {
+    padding: 0;
+  }
+
+  .formContainer {
+    width: 90vw;
+    padding-top: 5rem;
+  }
+
+  .formContainer::before {
+    background-size: cover;
+  }
+
+  .form {
+    width: 60%;
+  }
+
+}
+
+
+@media (max-width: 1000px) {
+  .container {
+    padding: 0;
+  }
+
+  .formContainer {
+    width: 100vw;
+  }
+
+  .formContainer::before {
+    background-size: cover;
+  }
+
+  .form {
+    width: 70%;
+  }
+
 }
