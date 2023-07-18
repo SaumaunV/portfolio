@@ -1,0 +1,256 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    padding: 5rem;
+    flex-wrap: wrap;
+}
+
+.leftColumn {
+    flex: 0.5;
+}
+
+.rightColumn {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+    height: 100px;
+    margin-bottom: 2rem;
+    gap: 3rem;
+}
+
+.info div {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.info div::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../../images/black_circle.png');
+    background-color: white;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+    z-index: -1;
+}
+
+.icon {
+    font-size: 2.5rem;
+}
+img {
+    height: 35px;
+}
+
+.heading {
+    width: max-content;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    background: linear-gradient(to right, #21A6F0, #B416DC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subheading {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    color: rgba(85, 84, 84, 0.712);
+    font-size: 1.75rem;
+}
+
+.projects {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    min-width: 260px;
+    height: 150px;
+    color: white;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.text {
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../../images/paint_banner.png');
+    background-color: white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+}
+
+.cv {
+    color: black;
+    font-size: 2rem;
+}
+
+.home_image {
+    width: auto;
+    height: 80vh;
+}
+
+@media (max-width: 1650px) {
+    .home_image {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 1450px) {
+    .home_image {
+        height: 55vh;
+    }
+}
+
+@media (max-width: 1400px) {
+    .home_image {
+        width: 700px;
+        height: auto;
+        margin-bottom: 3rem;
+    }
+
+    .leftColumn {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+    }
+
+    .rightColumn {
+        flex: 1;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .info {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subheading {
+        text-align: center;
+    }
+
+    .projects {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .home_image {
+        width: 500px;
+    }
+}
+
+@media (max-width: 800px) {
+    .heading {
+        font-size: 3.5rem;
+    }
+
+    .subheading {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 0;
+        margin-top: 3rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .heading {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .subheading {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+    }
+
+    .home_image {
+        width: 325px;
+    }
+
+    .projects {
+        height: 100px;
+        width: 315px;
+    }
+}
+
+@media (max-width: 300px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .subheading {
+        font-size: 0.9rem;
+    }
+
+    .home_image {
+        width: 275px;
+    }
+
+    .info {
+        margin-bottom: 0;
+        height: 75px;
+        gap: 2rem;
+    }
+
+    .info div {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon {
+        font-size: 1.75rem;
+    }
+
+    img {
+        height: 24px;
+    }
+
+    .cv {
+        font-size: 1.50rem;
+    }
+
+    .projects {
+        font-size: large;
+        height: 100px;
+        width: 260px;
+    }
+}
+
