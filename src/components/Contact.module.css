@@ -105,12 +105,9 @@ button {
 
 
 @media (max-width: 1000px) {
-  .container {
-    padding: 0;
-  }
-
   .formContainer {
     width: 100vw;
+    max-width: 100vw;
   }
 
   .formContainer::before {
@@ -119,6 +116,11 @@ button {
 
   .form {
     width: 70%;
+  }
+
+  .heading {
+    font-size: 3rem;
+    margin-top: 2rem;
   }
 
 }
