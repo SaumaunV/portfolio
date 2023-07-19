@@ -13,7 +13,8 @@
     flex: 0.5;
     align-items: center;
     margin: 0 6rem;
-    min-width: 300px;
+    min-width: 250px;
+    margin-top: 3rem;
 }
 
 .skillGrid {
@@ -61,10 +62,19 @@ figcaption {
 
 @media (max-width: 600px) {
   .skills, .about {
-    margin: 0 3rem;
+    margin: 1rem;
   }
 
   .skillGrid {
     gap: 2rem;
   }
+
+  .skills {
+    margin-bottom: 7rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
 }
