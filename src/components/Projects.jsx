@@ -27,7 +27,7 @@ function Projects(_, ref) {
         <Project
           image="../../images/discord-clone.png"
           name="Discord Clone"
-          description="Bug tracker application that allows users to collaborate with teams"
+          description="Chat application that allows users to join servers and interact through channels"
           stack={[
             "TypeScript",
             "React",
@@ -44,7 +44,7 @@ function Projects(_, ref) {
         <Project
           image="../../images/amazon-clone.png"
           name="Amazon Clone"
-          description="Bug tracker application that allows users to collaborate with teams"
+          description="E-commerce store with shopping cart, purchase history, and payment integration"
           stack={[
             "TypeScript",
             "React",
@@ -59,7 +59,7 @@ function Projects(_, ref) {
         <Project
           image="../../images/minesweeper.png"
           name="Minesweeper"
-          description="Bug tracker application that allows users to collaborate with teams"
+          description="Clone of the minesweeper game"
           stack={["JavaSript", "HTML", "CSS"]}
           demoLink="https://saumaunv.github.io/Minesweeper"
           githubLink="https://github.com/SaumaunV/Minesweeper"

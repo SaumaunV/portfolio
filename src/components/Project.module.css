@@ -21,6 +21,7 @@
 
 .description {
     font-size: large;
+    min-height: 4.5rem;
 }
 
 .stack {
@@ -29,7 +30,7 @@
     gap: 1rem;
     flex-wrap: wrap;
     margin-bottom: 2rem;
-    min-height: 4rem;
+    height: 4.5rem;
 }
 
 .stackItem {
