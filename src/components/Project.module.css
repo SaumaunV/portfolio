@@ -55,6 +55,8 @@
     border-radius: 4px;
     font-family: 'Roboto Condensed', sans-serif;
     color: #0877b3;
+    gap: 0.25rem;
+    transition: 0.2s;
 }
 
 .buttonContainer {
@@ -64,8 +66,10 @@
     gap: 2rem;
 }
 
-.liveButton, .codeButton {
-    gap: 0.25rem;
+
+.liveButton:hover, .codeButton:hover {
+    background-color: #21A6F0;
+    color: white;
 }
 
 .codeButton {
