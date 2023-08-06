@@ -80,7 +80,19 @@ button {
     font-size: 1.25rem;
     font-family: 'Roboto Condensed', sans-serif;
     background-color: white;
-    border: none;
+}
+
+button:hover {
+  background-color: #f9fafb;
+}
+
+.buttonText {
+  margin-right: 0.5rem;
+}
+
+button, input, textarea {
+  border: none;
+  border-radius: 0.25rem;
 }
 
 @media (max-width: 1500px) {
