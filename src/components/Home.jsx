@@ -1,8 +1,6 @@
 import { forwardRef } from 'react';
 import styles from './Home.module.css';
 import resume from '../../Saumaun-Vahedipour-Resume.pdf'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 function Home({ projectsRef }, ref) {
   function showProjects() {
@@ -12,23 +10,25 @@ function Home({ projectsRef }, ref) {
     <div ref={ref} className={styles.container}>
       <div className={styles.leftColumn}>
         <h1 className={styles.heading}>Saumaun Vahedipour</h1>
-        <h2 className={styles.subheading}>Full Stack Developer Fusing Design and Functionality</h2>
+        <h2 className={styles.subheading}>
+          Full Stack Developer Fusing Design and Functionality
+        </h2>
         <div className={styles.info}>
           <a href={resume} target="_blank" rel="noreferrer">
             <div>
-              <FontAwesomeIcon className={styles.cv} icon={faFileArrowDown} />
+              <i className={`fa-solid fa-file-arrow-down ${styles.cv}`}></i>
             </div>
           </a>
           <a href="https://github.com/SaumaunV" target="_blank">
             <div>
               <i
-                className={`devicon-github-original colored ${styles.icon}`}
+                className={`devicon-github-original colored ${styles.github}`}
               ></i>
             </div>
           </a>
           <a href="https://www.linkedin.com/in/saumaun/" target="_blank">
             <div>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" />
+              <i class={`devicon-linkedin-plain ${styles.linkedin}`}></i>
             </div>
           </a>
         </div>

@@ -33,6 +33,14 @@
     height: 75px;
     font-size: x-large;
     font-weight: bold;
+    background: linear-gradient(to right, #21A6F0, #B416DC, black 50%);
+    background-size: 400% 100%;
+    background-position: right bottom;
+    transition: all 0.4s ease-out;
+}
+
+.info div:hover {
+    background-position: left bottom;
 }
 
 .info div::before {
@@ -51,9 +59,39 @@
     z-index: -1;
 }
 
-.icon {
-    font-size: 2.5rem;
+.cv {
+    color: black;
+    font-size: 2rem;
 }
+
+.github {
+    background: transparent;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #21A6F0, #B416DC, black 50%);
+    background-size: 400% 100%;
+    background-position: right bottom;
+    transition: 0.5s;
+}
+
+.linkedin {
+    color: black;
+    font-size: 2.25rem;
+}
+
+.cv, .github, .linkedin {
+    background: linear-gradient(to right, #21A6F0, #B416DC, black 50%);
+    background-size: 400% 100%;
+    background-position: right bottom;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease-out;
+}
+
+.info div:hover .cv, .info div:hover .github, .info div:hover .linkedin {
+    background-position: left bottom;
+}
+
 img {
     height: 35px;
 }
@@ -87,6 +125,14 @@ img {
     color: white;
     font-size: x-large;
     cursor: pointer;
+    background: linear-gradient(to right, #21A6F0, #B416DC, black 50%);
+    background-size: 400% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+}
+
+.projects:hover {
+    background-position: left bottom;
 }
 
 .text {
@@ -107,11 +153,6 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     mix-blend-mode: screen;
-}
-
-.cv {
-    color: black;
-    font-size: 2rem;
 }
 
 .home_image {
