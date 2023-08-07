@@ -1,14 +1,19 @@
-import React, { forwardRef, useRef } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./Contact.module.css";
-import { faArrowRight, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faCircleCheck, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 function Contact(_, ref) {
+  const [error, setError] = useState(false);
+  const [submitted, setsubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const form = useRef();
 
   const sendEmail = (e) => {
+    setLoading(true);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -19,10 +24,11 @@ function Contact(_, ref) {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setsubmitted(true);
         },
         (error) => {
-          console.log(error.text);
+          setError(true);
+          setLoading(false);
         }
       );
     form.current.reset();
@@ -30,28 +36,48 @@ function Contact(_, ref) {
 
   return (
     <div ref={ref} className={styles.container}>
-      <div className={styles.formContainer}>
-        <h1 className={styles.heading}>Contact Me</h1>
-        <form ref={form} onSubmit={sendEmail} className={styles.form}>
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="user_name" required />
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="user_email" required />
-          <label htmlFor="message">Message</label>
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            required
-          ></textarea>
-          <button className={styles.submit} type="submit">
-            <span className={styles.buttonText}>Submit</span>
-            <FontAwesomeIcon icon={faArrowRight} />
-            {/* <FontAwesomeIcon icon={faCircleNotch} spin /> */}
-          </button>
-        </form>
-      </div>
+      {submitted ? (
+        <div className={styles.submitContainer}>
+          <div className={styles.submitInfo}>
+            <FontAwesomeIcon
+              className={styles.checkIcon}
+              icon={faCircleCheck}
+            />
+            <span className={styles.submitMessage}>Message sent</span>
+          </div>
+        </div>
+      ) : (
+        <div className={styles.formContainer}>
+          <h1 className={styles.heading}>Contact Me</h1>
+          <form ref={form} onSubmit={sendEmail} className={styles.form}>
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" name="user_name" required />
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="user_email" required />
+            <label htmlFor="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+            <button className={styles.submit} type="submit">
+              {loading ? (
+                <FontAwesomeIcon icon={faCircleNotch} spin />
+              ) : (
+                <>
+                  <span className={styles.buttonText}>Submit</span>{" "}
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </>
+              )}
+            </button>
+          </form>
+          {error && (
+            <span className={styles.errorMessage}>An error occurred</span>
+          )}
+        </div>
+      )}
     </div>
   );
 }
