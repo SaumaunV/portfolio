@@ -1,6 +1,7 @@
 import { forwardRef } from 'react';
 import styles from './Home.module.css';
 import resume from '../../Saumaun-Vahedipour-Resume.pdf'
+import home_image from "../../images/home_image.png";
 
 function Home({ projectsRef }, ref) {
   function showProjects() {
@@ -38,7 +39,7 @@ function Home({ projectsRef }, ref) {
       </div>
       <div className={styles.rightColumn}>
         <img
-          src="../../images/home_image.png"
+          src={home_image}
           alt=""
           className={styles.home_image}
         />
