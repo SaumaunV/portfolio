@@ -12,6 +12,7 @@ function Projects(_, ref) {
       <h1 className={styles.heading}>My Projects</h1>
       <div className={styles.projectContainer}>
         <Project
+          first
           image={bug_tracker_image}
           name="Bug Tracker"
           description="Bug tracker application that allows users to collaborate with teams"
@@ -30,7 +31,7 @@ function Projects(_, ref) {
         />
         <Project
           image={discord_clone_image}
-          name="Discord Clone"
+          name="Chatter"
           description="Chat application that allows users to join servers and interact through channels"
           stack={[
             "TypeScript",
@@ -47,7 +48,7 @@ function Projects(_, ref) {
         />
         <Project
           image={amazon_clone_image}
-          name="Amazon Clone"
+          name="E-commernce store"
           description="E-commerce store with shopping cart, purchase history, and payment integration"
           stack={[
             "TypeScript",
