@@ -1,9 +1,39 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
+}
+
 .container {
+    position: relative;
     max-width: 400px;
     min-width: 275px;
     padding: 1rem;
     border: 1px solid lightgray;
-    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    background: white;
+}
+
+#first::after, #first:before {
+    content: "";
+    position: absolute;
+    inset: -0.25rem;
+    z-index: -1;
+    background: conic-gradient(from var(--gradient-angle), #21A6F0, #B416DC, #21A6F0);
+    border-radius: inherit;
+    animation: rotation 5s linear infinite;
+    box-shadow: none;
+    border: none;
+}
+
+.container::after {
+    filter: blur(2rem);
 }
 
 .img {

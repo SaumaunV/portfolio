@@ -3,9 +3,9 @@ import styles from "./Project.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
-function Project({ image, name, description, stack, demoLink, githubLink }) {
+function Project({ image, name, description, stack, demoLink, githubLink, first }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id={first && styles.first}>
       <img className={styles.img} src={image} alt={name} />
       <div className={styles.stack}>
         {stack.map((item) => (
